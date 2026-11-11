@@ -1,0 +1,97 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128;
+    }
+
+    function isSuperAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == "olusegunola1104@gmail.com" ||
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == "Super Administrator")
+      );
+    }
+
+    function isAdminOrDispatcher() {
+      return isSignedIn() && (
+        isSuperAdmin() ||
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+         (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role in ["Administrator", "Dispatcher"]))
+      );
+    }
+
+    // Connection testing doc
+    match /test/{testId} {
+      allow read, write: if true;
+    }
+
+    // User profiles & RBAC
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn() && (request.auth.uid == userId || isAdminOrDispatcher());
+      allow update: if isSignedIn() && (request.auth.uid == userId || isAdminOrDispatcher());
+      allow delete: if isSuperAdmin();
+    }
+
+    // Shipment Orders
+    match /orders/{orderId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update: if isSignedIn();
+      allow delete: if isAdminOrDispatcher();
+    }
+
+    // Fleet Couriers
+    match /couriers/{courierId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if isAdminOrDispatcher();
+    }
+
+    // Corporate Customer Accounts
+    match /customers/{customerId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if isAdminOrDispatcher();
+    }
+
+    // Delivery Exceptions & Incident Reports
+    match /exceptions/{exceptionId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if isAdminOrDispatcher();
+    }
+
+    // Payments & Invoices
+    match /payments/{paymentId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if isAdminOrDispatcher();
+    }
+
+    // Operational Notifications
+    match /notifications/{notificationId} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isSignedIn();
+    }
+
+    // Immutable Security Audit Logs (write-only append, no client delete or overwrite)
+    match /auditLogs/{logId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+      allow update, delete: if false;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with role, email, and hub assignment",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 100 },
+        "role": { "type": "string", "enum": ["Super Administrator", "Administrator", "Dispatcher", "Driver", "Customer"] },
+        "roleTitle": { "type": "string", "maxLength": 100 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "hub": { "type": "string", "maxLength": 100 },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "ShipmentOrder": {
+      "title": "ShipmentOrder",
+      "description": "Waybill consignment order record",
+      "type": "object",
+      "properties": {
+        "trackingNo": { "type": "string", "maxLength": 64 },
+        "type": { "type": "string", "maxLength": 50 },
+        "weight": { "type": "string", "maxLength": 30 },
+        "customer": { "type": "string", "maxLength": 100 },
+        "customerEmail": { "type": "string", "maxLength": 100 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "origin": { "type": "string", "maxLength": 150 },
+        "originDetail": { "type": "string", "maxLength": 255 },
+        "destination": { "type": "string", "maxLength": 150 },
+        "destinationDetail": { "type": "string", "maxLength": 255 },
+        "courierName": { "type": "string", "maxLength": 100 },
+        "courierInitials": { "type": "string", "maxLength": 10 },
+        "courierVehicle": { "type": "string", "maxLength": 100 },
+        "status": { "type": "string", "maxLength": 50 },
+        "statusVariant": { "type": "string", "maxLength": 30 },
+        "deliveryFee": { "type": "number" },
+        "paymentStatus": { "type": "string", "enum": ["Paid", "Unpaid", "Pending", "Refunded"] },
+        "timestamp": { "type": "string", "maxLength": 50 },
+        "eta": { "type": "string", "maxLength": 50 },
+        "isDemo": { "type": "boolean" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["trackingNo", "customer", "origin", "destination", "status"]
+    },
+    "Courier": {
+      "title": "Courier",
+      "description": "Fleet courier driver profile and live dispatch status",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "trackingCode": { "type": "string", "maxLength": 50 },
+        "vehicle": { "type": "string", "maxLength": 100 },
+        "avatar": { "type": "string" },
+        "speed": { "type": "string", "maxLength": 30 },
+        "status": { "type": "string", "maxLength": 50 },
+        "statusColor": { "type": "string", "maxLength": 30 },
+        "eta": { "type": "string", "maxLength": 50 },
+        "battery": { "type": "string", "maxLength": 20 },
+        "rating": { "type": "number" },
+        "phone": { "type": "string", "maxLength": 30 },
+        "location": { "type": "string", "maxLength": 150 },
+        "parcelsLeft": { "type": "number" },
+        "isDemo": { "type": "boolean" }
+      },
+      "required": ["id", "name", "vehicle", "status"]
+    },
+    "CustomerAccount": {
+      "title": "CustomerAccount",
+      "description": "Registered customer or corporate consignor account",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "companyName": { "type": "string", "maxLength": 100 },
+        "contactPerson": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 100 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "activeOrders": { "type": "number" },
+        "totalSpend": { "type": "string", "maxLength": 50 },
+        "rating": { "type": "number" },
+        "tier": { "type": "string", "maxLength": 50 },
+        "isDemo": { "type": "boolean" }
+      },
+      "required": ["id", "name", "email", "phone"]
+    },
+    "DeliveryException": {
+      "title": "DeliveryException",
+      "description": "Reported delivery failure or route obstacle incident",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "orderTrackingNo": { "type": "string", "maxLength": 64 },
+        "customerName": { "type": "string", "maxLength": 100 },
+        "driverName": { "type": "string", "maxLength": 100 },
+        "reason": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 500 },
+        "reportedAt": { "type": "string", "maxLength": 50 },
+        "status": { "type": "string", "maxLength": 50 },
+        "assignedAdmin": { "type": "string", "maxLength": 100 },
+        "resolutionNotes": { "type": "string", "maxLength": 500 }
+      },
+      "required": ["id", "orderTrackingNo", "reason", "status"]
+    },
+    "PaymentRecord": {
+      "title": "PaymentRecord",
+      "description": "Freight billing and settlement record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "orderTrackingNo": { "type": "string", "maxLength": 64 },
+        "customerName": { "type": "string", "maxLength": 100 },
+        "amount": { "type": "number" },
+        "currency": { "type": "string", "maxLength": 10 },
+        "paymentMethod": { "type": "string", "maxLength": 50 },
+        "status": { "type": "string", "maxLength": 50 },
+        "reference": { "type": "string", "maxLength": 100 },
+        "date": { "type": "string", "maxLength": 50 },
+        "invoiceNo": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "orderTrackingNo", "amount", "status", "reference"]
+    },
+    "NotificationItem": {
+      "title": "NotificationItem",
+      "description": "Operational event notification alert",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string", "maxLength": 150 },
+        "message": { "type": "string", "maxLength": 500 },
+        "timestamp": { "type": "string", "maxLength": 50 },
+        "type": { "type": "string", "maxLength": 30 },
+        "read": { "type": "boolean" },
+        "category": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "title", "message", "type", "read"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "System event audit trail record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string", "maxLength": 50 },
+        "userName": { "type": "string", "maxLength": 100 },
+        "userRole": { "type": "string", "maxLength": 50 },
+        "action": { "type": "string", "maxLength": 100 },
+        "recordId": { "type": "string", "maxLength": 100 },
+        "details": { "type": "string", "maxLength": 500 },
+        "category": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "timestamp", "userName", "action", "details"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "User profile with role permission"
+    },
+    "/orders/{orderId}": {
+      "schema": { "$ref": "#/entities/ShipmentOrder" },
+      "description": "Shipment waybill consignments"
+    },
+    "/couriers/{courierId}": {
+      "schema": { "$ref": "#/entities/Courier" },
+      "description": "Courier fleet units and real-time status"
+    },
+    "/customers/{customerId}": {
+      "schema": { "$ref": "#/entities/CustomerAccount" },
+      "description": "Registered customer accounts"
+    },
+    "/exceptions/{exceptionId}": {
+      "schema": { "$ref": "#/entities/DeliveryException" },
+      "description": "Delivery exception and failure incident records"
+    },
+    "/payments/{paymentId}": {
+      "schema": { "$ref": "#/entities/PaymentRecord" },
+      "description": "Freight billing and settlement records"
+    },
+    "/notifications/{notificationId}": {
+      "schema": { "$ref": "#/entities/NotificationItem" },
+      "description": "Operational alerts and notices"
+    },
+    "/auditLogs/{logId}": {
+      "schema": { "$ref": "#/entities/AuditLog" },
+      "description": "Immutable security compliance audit trail"
+    }
+  }
+}

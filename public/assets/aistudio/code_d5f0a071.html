@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-bright":"#f8f9ff","outline":"#74777e","primary":"#00162e","on-tertiary-fixed-variant":"#004881","tertiary-container":"#002b51","inverse-on-surface":"#e9f1ff","on-primary-fixed-variant":"#334863","on-secondary-fixed":"#321300","on-tertiary-container":"#5994db","on-primary":"#ffffff","inverse-primary":"#b2c8e9","tertiary":"#00162e","primary-fixed-dim":"#b2c8e9","on-error-container":"#93000a","secondary-fixed":"#ffdbc8","on-primary-fixed":"#031c36","on-tertiary-fixed":"#001c38","error":"#ba1a1a","on-primary-container":"#7d93b2","on-error":"#ffffff","error-container":"#ffdad6","primary-fixed":"#d3e4ff","outline-variant":"#c4c6ce","primary-container":"#142b45","surface-container":"#e4efff","surface-container-high":"#daeaff","tertiary-fixed-dim":"#a2c9ff","tertiary-fixed":"#d3e4ff","secondary-container":"#fd934c","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","background":"#f8f9ff","on-surface-variant":"#43474d","surface-tint":"#4a607c","secondary":"#994700","on-secondary":"#ffffff","surface-variant":"#d3e4fa","surface-container-low":"#eef4ff","surface-container-highest":"#d3e4fa","on-surface":"#0c1d2c","inverse-surface":"#223242","surface":"#f8f9ff","surface-dim":"#cbdcf1","on-secondary-fixed-variant":"#743500","secondary-fixed-dim":"#ffb68a","on-background":"#0c1d2c","on-secondary-container":"#6c3000"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-sm":"0.5rem","space-md":"0.75rem","gutter-desktop":"1.5rem","margin":"1rem","gutter":"1rem","space-xl":"1.5rem","space-lg":"1rem","margin-desktop":"1.5rem","space-xs":"0.25rem"},"fontFamily":{"headline-lg":["Manrope"],"label-xs":["Inter"],"headline-xl-mobile":["Manrope"],"headline-xl":["Manrope"],"headline-sm":["Manrope"],"body-md":["Inter"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-md":["Manrope"],"code-md":["IBM Plex Mono"],"code-sm":["IBM Plex Mono"],"label-md":["Inter"],"label-sm":["Inter"]},"fontSize":{"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"700"}],"label-xs":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.03em","fontWeight":"600"}],"headline-xl-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.015em","fontWeight":"800"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.01em","fontWeight":"400"}],"body-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"code-md":["0.8125rem",{"lineHeight":"1.125rem","letterSpacing":"0em","fontWeight":"500"}],"code-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0em","fontWeight":"500"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.005em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-72 bg-primary-container text-on-primary z-50 flex flex-col justify-between select-none shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 overflow-hidden"><div class="h-16 px-space-xl flex items-center gap-space-md border-b border-on-primary/10"><img alt="DMS Logistics Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBmMux1T76Eq764mfxEZ40l6n-E3p66YZQpzuaVVQDZwj1VYjK6H4QTrAC9QCieG7Rxw0DBz2zj-WWclHjw5OrEnzjzd2R1oeM4Nxh1P4BpQgUoX2FUbdORYuuegg4qs4PVfxSG_3x6RW3F1d_FHJyFBrWOUbw1hT63zqNdadj9-SfWEbspjH7n25X6hXFkRYRRcjOIyqYK2mRbghIcE7cDuGp78pc4Yj9PGBLiAnPzqg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-primary leading-tight font-bold tracking-tight">DMS Enterprise</span><span class="font-label-xs text-label-xs text-primary-fixed-dim uppercase tracking-wider font-semibold">Suite Orchestrator</span></div></div><nav class="flex-1 px-space-md py-space-lg flex flex-col gap-space-xs overflow-y-auto" data-active-classes="bg-on-primary/10 text-on-primary font-label-md"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-on-primary/5 hover:text-on-primary transition-colors font-body-md text-body-md" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-on-primary/5 hover:text-on-primary transition-colors font-body-md text-body-md" data-path="orders" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span>Orders</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary text-on-secondary font-code-sm text-code-sm">1,420</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-on-primary/5 hover:text-on-primary transition-colors font-body-md text-body-md" data-path="create-order" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">post_add</span><span>Create Order</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-on-primary/5 hover:text-on-primary transition-colors font-body-md text-body-md" data-path="delivery-assignments" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">route</span><span>Delivery Assignments</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-on-primary/5 hover:text-on-primary transition-colors font-body-md text-body-md" data-path="live-tracking" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">my_location</span><span>Live Tracking</span></div><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-on-primary/5 hover:text-on-primary transition-colors font-body-md text-body-md" data-path="drivers" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">badge</span><span>Drivers</span></div><span class="px-space-xs py-0.5 rounded-full bg-on-primary/10 text-on-primary font-code-sm text-code-sm">42</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-on-primary/5 hover:text-on-primary transition-colors font-body-md text-body-md" data-path="customers" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">groups</span><span>Customers</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-on-primary/5 hover:text-on-primary transition-colors font-body-md text-body-md" data-path="notifications" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">notifications</span><span>Notifications</span></div><span class="px-space-xs py-0.5 rounded-full bg-error text-on-error font-code-sm text-code-sm">5</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-on-primary/5 hover:text-on-primary transition-colors font-body-md text-body-md" data-path="reports-analytics" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reports &amp; Analytics</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-on-primary/5 hover:text-on-primary transition-colors font-body-md text-body-md" data-path="settings" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></div></a></nav></div><div class="p-space-md flex flex-col gap-space-sm border-t border-on-primary/10"><div class="px-space-md py-space-sm rounded-lg bg-on-primary/5 flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-emerald-400"></span><span class="font-label-xs text-label-xs text-on-primary">Live Fleet Sync</span></div><span class="font-code-sm text-code-sm text-primary-fixed-dim">Online</span></div><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-error-container hover:text-on-error-container transition-colors font-body-md text-body-md" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span>Log Out</span></a></div></aside><div class="pl-72 min-h-screen bg-surface"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest border-b border-surface-variant z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm"><span class="font-label-sm text-label-sm text-on-surface-variant">Operations</span><span class="text-outline-variant">/</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Admin Dashboard</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low text-on-surface-variant font-code-sm text-code-sm"><span class="material-symbols-outlined text-[16px]">schedule</span><span>UTC+1 | Lagos Ops Hub</span></div></div><div class="flex items-center gap-space-lg"><div class="relative hidden md:flex items-center"><span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[18px]">search</span><input class="w-80 h-9 pl-9 pr-12 rounded-lg bg-surface border border-outline-variant text-on-surface font-body-sm text-body-sm placeholder:text-on-surface-variant focus:outline-none focus:border-secondary transition-colors" placeholder="Search tracking number, customer, driver..." type="text"/><kbd class="absolute right-space-sm px-1.5 py-0.5 rounded bg-surface-container-high border border-outline-variant text-on-surface-variant font-code-sm text-code-sm">⌘K</kbd></div><a class="hidden sm:flex items-center gap-space-xs px-space-md py-space-sm bg-secondary text-on-secondary rounded-lg font-label-md text-label-md hover:bg-on-secondary-container transition-colors" data-path="create-order" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>New Order</span></a><button class="relative p-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-md pl-space-sm border-l border-surface-variant"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLesVgFla3-uuVA8AriiRSdD8sa0ns7WITjIid8KAEzB_PllM3fDKOFltiYJHH5-Q5IOLdIhAHDjAnxhaeAnXdfksD0OQf7-xmVmcNsiRSk8Rf7P9TNYgpY80Pveft1u5gVTC0XUOosfBmGKnxjZc03rjblExO5tW-GEnhIamnfInkYszmsyHupGidaFMbIf2oIxMC-d8k0cUz2qc3HxYK8TO1sd-QlttGIviTM9oF"/><div class="hidden lg:flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface font-bold">Sarah Jenkins</span><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span></div><span class="font-label-xs text-label-xs text-on-surface-variant">Lead Operations Director</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full bg-surface min-h-[calc(100vh-4rem)]">
+<!-- Top Command Sub-Bar / Regional Filter -->
+<div class="px-gutter-desktop py-space-md bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-primary-container text-on-primary px-space-md py-1.5 rounded-xl font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>Regional Hub:</span>
+<select class="bg-transparent text-primary-fixed-dim font-bold outline-none cursor-pointer">
+<option class="bg-primary text-on-primary">All Lagos Corridors (42 Active)</option>
+<option class="bg-primary text-on-primary">Mainland Hub (Ikeja / Yaba)</option>
+<option class="bg-primary text-on-primary">Island Corridor (VI / Lekki)</option>
+<option class="bg-primary text-on-primary">Ebute-Metta Terminal</option>
+</select>
+</div>
+<div class="hidden md:flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-code-sm border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
+          Telemetry Feed: 100Hz Real-Time
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-xl flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span>Filter Status</span>
+</button>
+<button class="px-space-md py-1.5 bg-primary text-on-primary font-label-md text-label-md rounded-xl flex items-center gap-space-xs hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Sync Telemetry</span>
+</button>
+</div>
+</div>
+<!-- Main Split-Screen Workspace -->
+<div class="flex flex-col lg:flex-row flex-1 p-gutter-desktop gap-gutter-desktop">
+<!-- Left Panel: Active Fleet Telemetry List & Filterable Driver/Shipment Sidebar (35%) -->
+<div class="w-full lg:w-[35%] flex flex-col gap-space-md">
+<!-- Search & Quick Metrics -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface rounded-lg text-on-surface font-body-sm outline-none focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="Search courier, vehicle ID, waybill..." type="text"/>
+</div>
+<div class="grid grid-cols-3 gap-space-sm text-center">
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="block font-headline-sm text-headline-sm text-primary">38</span>
+<span class="block font-label-xs text-on-surface-variant">In Transit</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="block font-headline-sm text-headline-sm text-secondary">3</span>
+<span class="block font-label-xs text-on-surface-variant">Delayed</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg">
+<span class="block font-headline-sm text-headline-sm text-emerald-600">99.4%</span>
+<span class="block font-label-xs text-on-surface-variant">SLA Health</span>
+</div>
+</div>
+</div>
+<!-- Courier List Stream -->
+<div class="flex flex-col gap-space-sm overflow-y-auto max-h-[600px] pr-1">
+<!-- Courier Card 1 (Selected/Active) -->
+<div class="group cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low border-2 border-secondary p-space-md rounded-xl shadow-sm transition-all relative overflow-hidden" onclick="selectCourier(this)">
+<div class="absolute top-0 right-0 bg-secondary text-on-secondary px-space-sm py-0.5 rounded-bl-xl font-label-xs tracking-wider">ACTIVE WAYBILL</div>
+<div class="flex items-start gap-space-md">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of African male courier Tunde Bakare in uniform with professional demeanor smiling in modern logistics depot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzY8ycXXk-E1fiEh0N8K72-oUoC8aSAGy-QCR5_mCNfUJ8e_xDAirWC2uXMUJiqiNFYxF86i7y1x25v0s-i8oI07kbTNX7b2TafWLXgMbLs6q4KfjZmk8g05DPajKJSdzysjKfrYHynJWdcJS05aBJEfzAyUIJ25U3bJgP6655lYJ9YJVmxhxCBxQUZoASXbLN0DxZqSbJI7mCc7SWkWZ7hqyWy6cKsdB35wrlhiyV"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Tunde Bakare</h4>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">#DMS-TRK-98421</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Toyota HiAce Van (LND-402-XX)</p>
+<div class="mt-space-sm grid grid-cols-2 gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">speed</span>
+<span>54 km/h • Ikorodu Rd</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">battery_horiz_075</span>
+<span>92% | 4G Strong</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm border-t border-surface-variant flex items-center justify-between">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-50 text-blue-700">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-1.5"></span>
+                  ETA: 14 mins (Ikeja Hub)
+                </span>
+<span class="material-symbols-outlined text-secondary text-[20px] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Courier Card 2 -->
+<div class="group cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all" onclick="selectCourier(this)">
+<div class="flex items-start gap-space-md">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of Nigerian male courier Emeka Okonkwo wearing high visibility safety jacket inside cargo facility" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhh4owDvEDmTSwK_rSF6V7TeeC3cKRgY9xbR6byakVCmVDnTzLzknntk9Ih4CcT-GaKtOaOcEju1XKuhg2DnEjwU6F1yIMpgf2l-zVFLhfbO90BnvwDROxlplOXLkTltlkExnjBxxwmD4B8mlWufKKp_Q7Kci0rRSjXXT00ayuUVOsjSV0EOcWzm-GF4YotJCLz990LXsgQstGK4CC-VTLqKqgZTIqUayKw64V8Z5a"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Emeka Okonkwo</h4>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#DMS-TRK-98422</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Yamaha Dispatch Bike (KJA-881-YY)</p>
+<div class="mt-space-sm grid grid-cols-2 gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">speed</span>
+<span>68 km/h • Lekki-Epe Exp</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">mic_detect_auto</span>
+<span>98% | 5G Optic</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm border-t border-surface-variant flex items-center justify-between">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-50 text-emerald-700">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5"></span>
+                  ETA: 6 mins (Victoria Island)
+                </span>
+<span class="material-symbols-outlined text-secondary text-[20px] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Courier Card 3 -->
+<div class="group cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all" onclick="selectCourier(this)">
+<div class="flex items-start gap-space-md">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of Nigerian female courier Amina Bello in professional logistics operations attire holding rugged scanner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBkx7eAcX_IeVWAdX0Hgmb78MOTWa4tbI76P24orUuyEhVRZkz6QwPWSJFRcjNtIxpMFsMtzBMuIq7mNZHgp4r-Ik8qJP9PpneexGgD3N0xgIGBXQOzeJpc63Srzq74m1M2vsdOxS3Q08lXfUD8-OKX8FD8QkxPwwkuynCDmKxaq4eQ5siYzuyQF2nFFeLeg0Fo0gSARh5kkuMjJO5Uky86tJo4VJJotofst8iIuur"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">Amina Bello</h4>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#DMS-TRK-98423</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Isuzu Forward Truck (APP-120-ZZ)</p>
+<div class="mt-space-sm grid grid-cols-2 gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-amber-600">warning</span>
+<span>12 km/h • Traffic Jam</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-amber-600">battery_horiz_050</span>
+<span>44% | 4G Stable</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm border-t border-surface-variant flex items-center justify-between">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-amber-50 text-amber-700">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5"></span>
+                  Rerouting Recommended
+                </span>
+<span class="material-symbols-outlined text-secondary text-[20px] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Courier Card 4 -->
+<div class="group cursor-pointer bg-surface-container-lowest hover:bg-surface-container-low p-space-md rounded-xl shadow-sm transition-all" onclick="selectCourier(this)">
+<div class="flex items-start gap-space-md">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of Nigerian male courier David Adeleke wearing branded delivery cap with confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCg_yYGd2bczVjWMcoN-XziavZFCVKY9a1p5QDlS6a1b_tkE6bOf6cYFufpWAqxi7Ro21pzO10nss4r4yO1xsBq33QvQpFIFUK05MeBdgzebvjxIQJsBT8SDc_z8VTuLkJsT8iuN9xuk0BisxTxGwc7V4qoK-tZnTMJpV2aFJL3i3oSSFLfk_sXGY9eUk-nSY-Gtho2B18BC3Iqo-mjHvBEoEtR8ua95N2UcTEGw2c"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface truncate">David Adeleke</h4>
+<span class="font-code-sm text-code-sm text-on-surface-variant">#DMS-TRK-98424</span>
+</div>
+<p class="font-body-sm text-on-surface-variant">Suzuki Pickup (SUR-990-AA)</p>
+<div class="mt-space-sm grid grid-cols-2 gap-space-xs font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">speed</span>
+<span>45 km/h • Ebute-Metta</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-emerald-600">qr_code_2</span>
+<span>88% | 5G Optic</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm border-t border-surface-variant flex items-center justify-between">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-50 text-blue-700">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-1.5"></span>
+                  ETA: 22 mins (Mainland)
+                </span>
+<span class="material-symbols-outlined text-secondary text-[20px] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Interactive Enterprise Map Viewport (65%) -->
+<div class="w-full lg:w-[65%] flex flex-col gap-space-md">
+<!-- Map Container -->
+<div class="relative w-full h-[520px] rounded-xl overflow-hidden shadow-md bg-primary">
+<!-- Map Background Simulation -->
+<div class="absolute inset-0 bg-cover bg-center opacity-90" data-location="Lagos Metropolitan Corridors, Nigeria" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFGclJ1N_c7rYHovHvA2xgUsdqBnVfv9oRxFKnrXXazePcq5-vYDQBtXN7xwuF6Hf3l_euEwBgLn38cH_LqBHFMM-QpAzZbI3nmknFOeBhy--9lXCJiLN1S8cLDx1Jbv_pu4pTiR9oZXD0MT85BXzIZGygUm92PS309qXS9zFu2rGignYPmpwWx-87SdgRiWQkMW0BqlKbko-uhZmiEnnFQ9oTZBR_-kY3C0ouh-lk')"></div>
+<!-- Dark Tactical Map Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/80 via-primary/30 to-transparent pointer-events-none"></div>
+<!-- Geo-Fenced Zones & Route Polylines SVG Simulation -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<!-- Active Route Corridor -->
+<path class="animate-pulse" d="M 120 400 Q 250 250 420 180 T 650 120" fill="none" stroke="#D97732" stroke-dasharray="8 4" stroke-width="4"></path>
+<!-- Secondary Route -->
+<path d="M 200 480 Q 300 320 500 280" fill="none" opacity="0.6" stroke="#321300" stroke-width="3"></path>
+<!-- Geo-Fence Zone Polygon -->
+<polygon fill="#D97732" fill-opacity="0.12" points="350,120 550,90 600,280 380,320" stroke="#D97732" stroke-dasharray="4 4" stroke-width="2"></polygon>
+<text fill="#D97732" font-family="IBM Plex Mono" font-size="11" font-weight="bold" x="365" y="140">ZONE A: VICTORIA ISLAND SECURE PERIMETER</text>
+</svg>
+<!-- Live Vehicle Pins on Map -->
+<!-- Pin 1: Tunde Bakare (Active Selected) -->
+<div class="absolute top-[35%] left-[45%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-12 h-12 rounded-full bg-secondary/30 animate-ping"></span>
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg border-2 border-white font-bold">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+</div>
+<div class="absolute top-12 bg-primary text-on-primary px-space-sm py-1 rounded-lg shadow-xl whitespace-nowrap border border-secondary">
+<p class="font-code-sm text-code-sm font-bold">#DMS-TRK-98421</p>
+<p class="font-label-xs text-primary-fixed-dim">Tunde Bakare • 54 km/h</p>
+</div>
+</div>
+</div>
+<!-- Pin 2: Emeka Okonkwo -->
+<div class="absolute top-[20%] left-[70%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-md border-2 border-secondary font-bold">
+<span class="material-symbols-outlined text-[16px]">two_wheeler</span>
+</div>
+</div>
+<!-- Pin 3: Amina Bello -->
+<div class="absolute top-[65%] left-[30%] transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group">
+<div class="w-8 h-8 rounded-full bg-amber-600 text-on-secondary flex items-center justify-center shadow-md border-2 border-white font-bold">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+</div>
+</div>
+<!-- Map Controls Floating Toolbar -->
+<div class="absolute top-space-md right-space-md flex flex-col gap-space-xs bg-surface-container-lowest/95 backdrop-blur p-1 rounded-xl shadow-lg border border-surface-variant">
+<button class="p-2 hover:bg-surface-container-low rounded-lg text-on-surface flex items-center justify-center transition-colors" title="Toggle Satellite">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</button>
+<button class="p-2 hover:bg-surface-container-low rounded-lg text-secondary flex items-center justify-center transition-colors" title="Traffic Overlay">
+<span class="material-symbols-outlined text-[20px]">traffic</span>
+</button>
+<button class="p-2 hover:bg-surface-container-low rounded-lg text-on-surface flex items-center justify-center transition-colors" title="Geo-Fences">
+<span class="material-symbols-outlined text-[20px]">polyline</span>
+</button>
+<div class="h-px bg-surface-variant my-1"></div>
+<button class="p-2 hover:bg-surface-container-low rounded-lg text-on-surface flex items-center justify-center transition-colors" title="Zoom In">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+<button class="p-2 hover:bg-surface-container-low rounded-lg text-on-surface flex items-center justify-center transition-colors" title="Zoom Out">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+</div>
+<!-- Map Legend Footer Overlay -->
+<div class="absolute bottom-space-md left-space-md right-space-md bg-primary/90 backdrop-blur text-on-primary px-space-md py-space-sm rounded-xl flex flex-wrap items-center justify-between gap-space-md border border-on-primary/10">
+<div class="flex items-center gap-space-md">
+<span class="font-code-sm text-code-sm text-secondary-fixed font-bold">SELECTED MANIFEST:</span>
+<span class="font-code-sm text-code-sm">#DMS-TRK-98421</span>
+<span class="text-on-primary/40">|</span>
+<span class="font-body-sm">Client: Dangote Industries PLC</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-xs text-primary-fixed-dim">Cargo: Industrial Grade Polymers</span>
+<span class="px-2 py-0.5 bg-secondary text-on-secondary rounded font-code-sm font-semibold">Cold-Chain Secure</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Toolbar for Selected Courier -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h5 class="font-headline-sm text-headline-sm text-on-surface">Dispatcher Operations Console</h5>
+<p class="font-body-sm text-on-surface-variant">Instant command override &amp; direct telemetry link for Tunde Bakare</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-2 bg-primary text-on-primary rounded-xl font-label-md hover:bg-primary-container transition-colors flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+<span>Ping Driver</span>
+</button>
+<button class="px-space-md py-2 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-xl font-label-md transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">route</span>
+<span>Re-Route</span>
+</button>
+<button class="px-space-md py-2 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-xl font-label-md transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+<span>Broadcast</span>
+</button>
+<button class="px-space-md py-2 bg-error text-on-error rounded-xl font-label-md hover:bg-error/90 transition-colors flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px]">sos</span>
+<span>Dispatch SOS</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Telemetry & Chain of Custody Drawer -->
+<div class="px-gutter-desktop pb-space-xl">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden border-t-4 border-secondary">
+<div class="px-space-xl py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-secondary">history</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Live Event Stream &amp; Chain of Custody Log (#DMS-TRK-98421)</h3>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 bg-surface-container-highest rounded-lg font-code-sm text-code-sm text-on-surface-variant">Secure Hash: 0x8F92A...4C1E</span>
+<button class="text-secondary hover:underline font-label-md text-label-md">Export Audit Report</button>
+</div>
+</div>
+<div class="p-space-xl grid grid-cols-1 md:grid-cols-4 gap-space-lg">
+<!-- Log Item 1 -->
+<div class="flex flex-col gap-space-xs p-space-md bg-surface rounded-xl">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">14:22:10 UTC</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Geofence Entry Confirmed</p>
+<p class="font-body-sm text-on-surface-variant">Vehicle entered Victoria Island Secure Perimeter Zone A via Lekki Toll Gate check-point.</p>
+<span class="mt-space-sm font-code-sm text-xs text-outline">Lat: 6.4281° N, Lon: 3.4219° E</span>
+</div>
+<!-- Log Item 2 -->
+<div class="flex flex-col gap-space-xs p-space-md bg-surface rounded-xl">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">14:10:45 UTC</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Cold-Chain Temp Check</p>
+<p class="font-body-sm text-on-surface-variant">Compartment sensor reading stable at +4.2°C. Within threshold limits.</p>
+<span class="mt-space-sm font-code-sm text-xs text-outline">Sensor ID: CLD-LAG-09</span>
+</div>
+<!-- Log Item 3 -->
+<div class="flex flex-col gap-space-xs p-space-md bg-surface rounded-xl">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">13:55:00 UTC</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Tamper-Evident Bag Scan</p>
+<p class="font-body-sm text-on-surface-variant">RFID seal integrity verified intact by automated scanner at Ikeja Hub exit.</p>
+<span class="mt-space-sm font-code-sm text-xs text-outline">Seal Tag: #TEB-883921</span>
+</div>
+<!-- Log Item 4 -->
+<div class="flex flex-col gap-space-xs p-space-md bg-surface rounded-xl">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm text-secondary font-semibold">13:30:15 UTC</span>
+<span class="w-2 h-2 rounded-full bg-blue-500"></span>
+</div>
+<p class="font-label-md text-label-md text-on-surface">Manifest Assigned</p>
+<p class="font-body-sm text-on-surface-variant">Courier Tunde Bakare accepted dispatch assignment and loaded manifest items.</p>
+<span class="mt-space-sm font-code-sm text-xs text-outline">Dispatcher ID: Sarah J.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function selectCourier(element) {
+    document.querySelectorAll('.group').forEach(el => {
+      el.classList.remove('border-2', 'border-secondary');
+      const badge = el.querySelector('.absolute.top-0.right-0');
+      if (badge) badge.remove();
+    });
+    element.classList.add('border-2', 'border-secondary');
+    if (!element.querySelector('.absolute.top-0.right-0')) {
+      const tag = document.createElement('div');
+      tag.className = 'absolute top-0 right-0 bg-secondary text-on-secondary px-space-sm py-0.5 rounded-bl-xl font-label-xs tracking-wider';
+      tag.innerText = 'ACTIVE WAYBILL';
+      element.appendChild(tag);
+    }
+  }
+</script></main></div></body></html>

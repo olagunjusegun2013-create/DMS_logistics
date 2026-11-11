@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-container":"#6c3000","surface-container-highest":"#d3e4fa","on-primary-container":"#7d93b2","on-primary-fixed":"#031c36","on-background":"#0c1d2c","tertiary-fixed-dim":"#a2c9ff","background":"#f8f9ff","primary-container":"#142b45","error-container":"#ffdad6","secondary-container":"#fd934c","inverse-surface":"#223242","surface-container":"#e4efff","tertiary":"#00162e","on-secondary-fixed-variant":"#743500","on-tertiary-fixed":"#001c38","surface-container-high":"#daeaff","on-tertiary":"#ffffff","surface-tint":"#4a607c","outline-variant":"#c4c6ce","surface-variant":"#d3e4fa","secondary":"#994700","primary-fixed-dim":"#b2c8e9","secondary-fixed-dim":"#ffb68a","on-error-container":"#93000a","outline":"#74777e","error":"#ba1a1a","on-primary-fixed-variant":"#334863","primary":"#00162e","tertiary-fixed":"#d3e4ff","inverse-on-surface":"#e9f1ff","tertiary-container":"#002b51","surface-container-low":"#eef4ff","surface-container-lowest":"#ffffff","secondary-fixed":"#ffdbc8","surface":"#f8f9ff","on-secondary":"#ffffff","on-tertiary-container":"#5994db","on-surface-variant":"#43474d","surface-bright":"#f8f9ff","on-secondary-fixed":"#321300","inverse-primary":"#b2c8e9","on-error":"#ffffff","primary-fixed":"#d3e4ff","on-surface":"#0c1d2c","on-primary":"#ffffff","on-tertiary-fixed-variant":"#004881","surface-dim":"#cbdcf1"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-md":"0.75rem",gutter:"1rem","space-sm":"0.5rem",margin:"1rem","space-xl":"1.5rem","gutter-desktop":"1.5rem","space-xs":"0.25rem","space-lg":"1rem","margin-desktop":"1.5rem"},fontFamily:{"label-xs":["Inter"],"label-md":["Inter"],"headline-md":["Manrope"],"body-md":["Inter"],"headline-xl-mobile":["Manrope"],"label-sm":["Inter"],"headline-xl":["Manrope"],"headline-sm":["Manrope"],"body-lg":["Inter"],"code-sm":["IBM Plex Mono"],"headline-lg":["Manrope"],"code-md":["IBM Plex Mono"],"body-sm":["Inter"]},fontSize:{"label-xs":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.03em",fontWeight:"600"}],"label-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0.005em",fontWeight:"600"}],"headline-md":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"700"}],"body-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0em",fontWeight:"400"}],"headline-xl-mobile":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.015em",fontWeight:"800"}],"label-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.02em",fontWeight:"600"}],"headline-xl":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-sm":["1.125rem",{lineHeight:"1.5rem",letterSpacing:"0em",fontWeight:"600"}],"body-lg":["1rem",{lineHeight:"1.5rem",letterSpacing:"0em",fontWeight:"400"}],"code-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0em",fontWeight:"500"}],"headline-lg":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.015em",fontWeight:"700"}],"code-md":["0.8125rem",{lineHeight:"1.125rem",letterSpacing:"0em",fontWeight:"500"}],"body-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.01em",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_1px_8px_rgba(20,43,69,0.06)]"><div class="h-16 w-full px-margin-desktop flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-xl flex-shrink-0"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-secondary-container text-[20px]">local_shipping</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">DMS Enterprise</span><span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider mt-0.5">Customer Portal</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container text-primary font-semibold"><a class="px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors font-label-md text-label-md" data-path="track-shipment" href="#">Track Shipment</a><a class="px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors font-label-md text-label-md" data-path="my-orders-shipments" href="#">My Orders / Shipments</a><a aria-current="page" class="px-space-md py-space-xs rounded transition-colors bg-surface-container text-primary font-semibold" data-path="request-delivery" href="#">Request Delivery</a><a class="px-space-md py-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors font-label-md text-label-md" data-path="support-help" href="#">Support &amp; Help</a></nav></div><div class="flex items-center gap-space-md flex-shrink-0"><div class="relative hidden md:flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-outline text-[18px] pointer-events-none">search</span><input class="w-56 lg:w-64 pl-9 pr-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-code-sm text-code-sm shadow-[0_1px_4px_rgba(20,43,69,0.06)] focus:outline-none focus:ring-1 focus:ring-secondary placeholder:text-outline transition-all" placeholder="Quick search tracking #..." type="text"/></div><button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant transition-colors font-label-md text-label-md shadow-[0_1px_4px_rgba(153,71,0,0.2)]" type="button"><span class="material-symbols-outlined text-[18px]">add_circle</span><span class="hidden sm:inline">New Delivery Request</span></button><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface leading-tight">B. Adeleke</span><span class="font-label-xs text-label-xs text-on-surface-variant leading-tight">Aliko Corp</span></div></div></div></div></header><main class="w-full pt-16 bg-background min-h-[calc(100vh-4rem)] flex flex-col justify-between"><div><div class="flex flex-col w-full">
+<!-- Progress Stepper Header -->
+<section class="w-full bg-surface-container-lowest shadow-sm py-space-lg px-margin-desktop mb-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider mb-1">
+<span>Enterprise Portal</span>
+<span>/</span>
+<span>Logistics Booking</span>
+<span>/</span>
+<span class="text-secondary font-semibold">Waybill Generator</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Request a New Delivery</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configure point-to-point consignment, special handling protocols, and schedule autonomous fleet dispatch.</p>
+</div>
+<!-- Stepper Nodes -->
+<div class="flex items-center gap-2 overflow-x-auto py-1">
+<!-- Step 1 (Active) -->
+<div class="flex items-center gap-2 flex-shrink-0">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-code-sm text-code-sm font-semibold shadow-sm ring-2 ring-secondary">
+            01
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Parties</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Pickup &amp; Recipient</span>
+</div>
+</div>
+<div class="w-8 h-0.5 bg-secondary flex-shrink-0"></div>
+<!-- Step 2 -->
+<div class="flex items-center gap-2 flex-shrink-0 opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-code-sm text-code-sm font-semibold">
+            02
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Parcel</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Specs &amp; Handling</span>
+</div>
+</div>
+<div class="w-8 h-0.5 bg-outline-variant flex-shrink-0"></div>
+<!-- Step 3 -->
+<div class="flex items-center gap-2 flex-shrink-0 opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-code-sm text-code-sm font-semibold">
+            03
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Service</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">SLA &amp; Windows</span>
+</div>
+</div>
+<div class="w-8 h-0.5 bg-outline-variant flex-shrink-0"></div>
+<!-- Step 4 -->
+<div class="flex items-center gap-2 flex-shrink-0 opacity-60">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center font-code-sm text-code-sm font-semibold">
+            04
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Review</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Settlement</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Booking Canvas -->
+<div class="max-w-7xl mx-auto px-margin-desktop w-full pb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- FORM COLUMN (8 Cols) -->
+<form class="lg:col-span-8 flex flex-col gap-space-lg" id="booking-form">
+<!-- SECTION 1: PICKUP INFORMATION -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-lg bg-primary-container text-surface-container-lowest flex items-center justify-center font-label-xs text-label-xs font-bold">1</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pickup Information</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Origin hub and manifest dispatch node</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">warehouse</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Saved Location Selector -->
+<div class="md:col-span-2 flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Origin Preset Profile</label>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm appearance-none cursor-pointer" id="saved-origin">
+<option value="ikeja">Ikeja Warehouse 4C (Plot 12 Commercial Ave, Industrial Zone)</option>
+<option value="dangote">Dangote HQ - Victoria Island (Marble Towers, 7th Fl)</option>
+<option value="lekki">Lekki Logistics Hub - Phase 1 Depot</option>
+<option value="new">+ Specify New Ad-Hoc Origin Address</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Sender Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Sender Contact Person</label>
+<input class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm" type="text" value="B. Adeleke (Outbound Ops)"/>
+</div>
+<!-- Sender Phone -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Dispatch Phone Line</label>
+<div class="flex items-center">
+<span class="h-9 px-2.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm flex items-center rounded-l-lg select-none">+234</span>
+<input class="w-full h-9 px-3 rounded-r-lg bg-surface-container-low text-on-surface font-code-sm text-code-sm focus:outline-none focus:bg-surface-container-lowest shadow-sm" type="tel" value="803 491 8820"/>
+</div>
+</div>
+<!-- Pickup Date -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Requested Pickup Date</label>
+<div class="relative">
+<input class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-code-sm text-code-sm focus:outline-none focus:bg-surface-container-lowest shadow-sm" type="date" value="2025-05-18"/>
+</div>
+</div>
+<!-- Preferred Window -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Dock Pickup Window</label>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm appearance-none cursor-pointer">
+<option>Immediate / Next Available Rider (09:00 - 11:00)</option>
+<option>Afternoon Shift (13:00 - 15:30)</option>
+<option>Evening Consignment Cut-Off (17:00 - 19:00)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2 text-outline pointer-events-none text-[20px]">schedule</span>
+</div>
+</div>
+<!-- Detailed Instructions -->
+<div class="md:col-span-2 flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Internal Pickup Guidance / Gate Access</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm resize-none" placeholder="e.g. Loading bay 3 at the rear of compound. Driver must present clearance token DMS-901 at gate." rows="2">Loading Bay 3 at the rear warehouse entrance. Driver must request Gate Pass from Chief Security Officer on arrival.</textarea>
+</div>
+</div>
+</div>
+<!-- SECTION 2: RECIPIENT DETAILS -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-lg bg-primary-container text-surface-container-lowest flex items-center justify-center font-label-xs text-label-xs font-bold">2</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recipient &amp; Destination Details</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Target consignee, drop-off geolocation &amp; validation</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">location_on</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Recipient Full Name -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Recipient Full Name</label>
+<input class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="e.g. Chioma Okonkwo" type="text" value="Dr. Olawale Martins"/>
+</div>
+<!-- Company / Dept -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Company / Department</label>
+<input class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="e.g. Zenith Financial - Legal Suite" type="text" value="Ikoyi BioLabs &amp; Clinical Diagnostics"/>
+</div>
+<!-- Recipient Phone -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Recipient Direct Phone</label>
+<div class="flex items-center">
+<span class="h-9 px-2.5 bg-surface-container text-on-surface-variant font-code-sm text-code-sm flex items-center rounded-l-lg select-none">+234</span>
+<input class="w-full h-9 px-3 rounded-r-lg bg-surface-container-low text-on-surface font-code-sm text-code-sm focus:outline-none focus:bg-surface-container-lowest shadow-sm" type="tel" value="812 555 4902"/>
+</div>
+</div>
+<!-- Alternate Notification -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Recipient Email (Electronic POD)</label>
+<input class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm" type="email" value="o.martins@biolabs.ng"/>
+</div>
+<!-- Delivery Street Address -->
+<div class="md:col-span-2 flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Exact Destination Address</label>
+<input class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm" type="text" value="Plot 84A, Kingsway Road (Alfred Rewane), Golden Plaza 3rd Floor, Ikoyi, Lagos"/>
+</div>
+<!-- Delivery Instructions -->
+<div class="md:col-span-2 flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Consignee Handover Instructions</label>
+<input class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest shadow-sm" type="text" value="Ring 3rd floor reception intercom. Do NOT leave with ground security; hand directly to recipient."/>
+</div>
+</div>
+</div>
+<!-- SECTION 3: PACKAGE SPECIFICATIONS & SPECIAL HANDLING -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-lg bg-primary-container text-surface-container-lowest flex items-center justify-center font-label-xs text-label-xs font-bold">3</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Consignment Specifications</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Classifications, physical metrics, and containment conditions</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">inventory_2</span>
+</div>
+<!-- Category Selection Pills -->
+<div class="flex flex-col gap-1 mb-space-md">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Consignment Category</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs pt-1">
+<button class="category-pill flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-all text-center" type="button">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Documents</span>
+</button>
+<button class="category-pill flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-all text-center" type="button">
+<span class="material-symbols-outlined text-[16px]">devices</span>
+<span>Electronics</span>
+</button>
+<button class="category-pill active flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm shadow-sm transition-all text-center" type="button">
+<span class="material-symbols-outlined text-[16px]">vaccines</span>
+<span>Cold-Chain</span>
+</button>
+<button class="category-pill flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-all text-center" type="button">
+<span class="material-symbols-outlined text-[16px]">pallet</span>
+<span>General Cargo</span>
+</button>
+</div>
+</div>
+<!-- Metrics Row -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md mb-space-lg">
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Approx Weight (kg)</label>
+<div class="relative">
+<input class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-code-md text-code-md focus:outline-none focus:bg-surface-container-lowest shadow-sm" id="input-weight" step="0.1" type="number" value="2.4"/>
+<span class="absolute right-3 top-2 font-code-sm text-code-sm text-on-surface-variant">KG</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Dimensions (L × W × H cm)</label>
+<input class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-on-surface font-code-md text-code-md focus:outline-none focus:bg-surface-container-lowest shadow-sm" placeholder="e.g. 30 x 20 x 15" type="text" value="32 × 24 × 18"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Declared Value (₦)</label>
+<div class="relative">
+<input class="w-full h-9 pl-7 pr-3 rounded-lg bg-surface-container-low text-on-surface font-code-md text-code-md focus:outline-none focus:bg-surface-container-lowest shadow-sm" id="input-value" type="text" value="185,000"/>
+<span class="absolute left-2.5 top-2 font-code-sm text-code-sm text-on-surface-variant">₦</span>
+</div>
+</div>
+</div>
+<!-- Special Handling Checklist -->
+<div class="pt-space-sm">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider block mb-space-xs">Mandatory Handling &amp; Custody Protocols</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Fragile Cargo</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Shock &amp; tilt sensors</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" id="check-sig" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Physical Signature</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Biometric/OTP POD</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Cold Storage</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">2°C to 8°C Monitored</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- SECTION 4: DELIVERY PRIORITY & SERVICE LEVEL -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-7 h-7 rounded-lg bg-primary-container text-surface-container-lowest flex items-center justify-center font-label-xs text-label-xs font-bold">4</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Transit Priority &amp; SLA Commitment</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Guaranteed delivery window and courier tier</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">bolt</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Option 1: Express -->
+<label class="relative flex flex-col p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer shadow-sm transition-all group has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-secondary text-on-secondary font-label-xs text-label-xs font-bold uppercase tracking-wider">Fastest</span>
+<input checked="" class="w-4 h-4 text-secondary focus:ring-0" name="priority_tier" type="radio" value="express"/>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Same-Day Express</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-3">Direct express courier dispatched immediately. Delivered in 2–4 hours.</p>
+<div class="mt-auto pt-2 flex items-baseline justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Fixed Priority Surcharge</span>
+<span class="font-code-md text-code-md font-bold text-secondary">+₦2,000</span>
+</div>
+</label>
+<!-- Option 2: Next-Day -->
+<label class="relative flex flex-col p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer shadow-sm transition-all group has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-xs text-label-xs font-semibold">Standard</span>
+<input class="w-4 h-4 text-secondary focus:ring-0" name="priority_tier" type="radio" value="nextday"/>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Next-Day Hub</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-3">Batched regional transit. Delivered before 12:00 PM tomorrow.</p>
+<div class="mt-auto pt-2 flex items-baseline justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Priority Surcharge</span>
+<span class="font-code-md text-code-md font-bold text-on-surface">+₦800</span>
+</div>
+</label>
+<!-- Option 3: Economy -->
+<label class="relative flex flex-col p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer shadow-sm transition-all group has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-md">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-xs text-label-xs font-semibold">Bulk Rate</span>
+<input class="w-4 h-4 text-secondary focus:ring-0" name="priority_tier" type="radio" value="economy"/>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Economy Freight</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-3">Consolidated road freight network. Delivered within 48 business hours.</p>
+<div class="mt-auto pt-2 flex items-baseline justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Priority Surcharge</span>
+<span class="font-code-md text-code-md font-bold text-on-surface">₦0</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Visual Location Route Map Element -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">alt_route</span>
+<span class="font-semibold">Calculated Fleet Corridor: Ikeja Central to Ikoyi Island</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Approx. 18.4 km • Est. 42 min run time</span>
+</div>
+<!-- Google Maps static pipeline view -->
+<div class="w-full h-44 rounded-lg bg-cover bg-center shadow-inner relative flex items-end p-space-sm" data-location="Lagos, Nigeria" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCngGvPVxVTFv8Tll5FR015EHeB49Ty_oMj0QdlcjwklIIH7iVK7zNOm2lJMcpf38KtJb-cOSK1y5eTNYCdjXDPe2qUNIGhy0Jq08sNpYJ2X3y_RD11CrT0Sv1axNkWUrbdjX-T43uafdpWoIq_1UFTvtDhraritPIIBCO9e0md5wDrbTuW0j9oQk8sFjszjrrl7EzAYRjGAy8_Ds_qpcg3WySShHnzYU3BzqhJ9MO0')">
+<div class="bg-surface-container-lowest/90 backdrop-blur px-3 py-1.5 rounded shadow-sm flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+<span class="font-label-xs text-label-xs text-on-surface font-medium">Origin: Ikeja 4C</span>
+</div>
+<span class="text-outline">→</span>
+<div class="flex items-center gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+<span class="font-label-xs text-label-xs text-on-surface font-medium">Destination: Ikoyi</span>
+</div>
+</div>
+</div>
+</div>
+</form>
+<!-- SIDEBAR COLUMN (4 Cols) - Live Calculation & Confirmation -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg sticky top-20">
+<!-- Live Cost Breakdown Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Real-Time Tariff Quote</h3>
+</div>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">LIVE TARIFF</span>
+</div>
+<!-- Route & Consignment pill summary -->
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-md flex flex-col gap-1">
+<div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs">
+<span>MANIFEST ID:</span>
+<span class="font-code-sm text-code-sm font-semibold text-primary">DMS-2025-NG-8891</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs">
+<span>SERVICE LEVEL:</span>
+<span class="font-semibold text-on-surface" id="summary-sla">Same-Day Express (2-4h)</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-xs text-label-xs">
+<span>ESTIMATED WEIGHT:</span>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface" id="summary-weight">2.40 kg</span>
+</div>
+</div>
+<!-- Dynamic Itemized Charges -->
+<div class="flex flex-col gap-2 font-body-sm text-body-sm pb-space-md">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Base Distance Fare (18.4 km)</span>
+<span class="font-code-md text-code-md text-on-surface">₦4,500</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Weight Surcharge (2.4 kg)</span>
+<span class="font-code-md text-code-md text-on-surface">₦1,200</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Priority Expedited Dispatch</span>
+<span class="font-code-md text-code-md text-on-surface" id="quote-priority">₦2,000</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Signature &amp; Transit Insurance</span>
+<span class="font-code-md text-code-md text-on-surface">₦800</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant text-label-xs font-label-xs pt-1">
+<span>V.A.T. (7.5% Included)</span>
+<span class="font-code-sm text-code-sm">₦593</span>
+</div>
+</div>
+<!-- Total Due -->
+<div class="pt-space-md mb-space-lg bg-surface-container-high -mx-space-lg px-space-lg py-space-md rounded-lg">
+<div class="flex items-baseline justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider font-semibold">Total Net Payable</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">All taxes and duties covered</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-xl text-headline-xl text-primary tracking-tight font-extrabold" id="quote-total">₦8,500</span>
+</div>
+</div>
+</div>
+<!-- Payment Selector -->
+<div class="flex flex-col gap-2 mb-space-lg">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Settlement Ledger</label>
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-sm">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="w-4 h-4 text-secondary focus:ring-0" name="payment_method" type="radio"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Corporate Credit Account</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Bal: ₦450,000 (30-day term)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance_wallet</span>
+</label>
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-sm">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 text-secondary focus:ring-0" name="payment_method" type="radio"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Instant Card / NIBSS Transfer</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Automated webhook confirmation</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">credit_card</span>
+</label>
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors has-[:checked]:bg-surface-container-lowest has-[:checked]:shadow-sm">
+<div class="flex items-center gap-space-sm">
+<input class="w-4 h-4 text-secondary focus:ring-0" name="payment_method" type="radio"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Pay on Delivery (Consignee Escrow)</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Recipient settles on receipt</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">handshake</span>
+</label>
+</div>
+<!-- Submit CTA Button -->
+<div class="flex flex-col gap-space-sm">
+<button class="w-full py-3 px-space-md rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant transition-all font-label-md text-label-md flex items-center justify-center gap-2 shadow-md" id="btn-dispatch" type="button">
+<span class="material-symbols-outlined text-[20px]">send_and_archive</span>
+<span>Confirm &amp; Dispatch Shipment</span>
+</button>
+<!-- Secondary Actions -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+<span>Save Draft</span>
+</button>
+<button class="py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Print Pro-Forma</span>
+</button>
+</div>
+</div>
+<!-- SLA Commitment Badge -->
+<div class="mt-space-lg p-2.5 rounded-lg bg-surface-container flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">verified_user</span>
+<span class="font-body-sm text-body-sm text-on-surface leading-tight">Backed by DMS 99.8% On-Time SLA Guarantee. Real-time GPS telemetry link will activate upon driver dock departure.</span>
+</div>
+</div>
+<!-- Help Desk Callout Mini -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Need custom freight quote?</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Lagos Dispatch Desk • Extension 402</span>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-primary font-label-xs text-label-xs font-semibold" type="button">
+            Connect
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interaction for category pills selection
+  document.querySelectorAll('.category-pill').forEach(pill => {
+    pill.addEventListener('click', function() {
+      document.querySelectorAll('.category-pill').forEach(p => {
+        p.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm', 'active');
+        p.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      this.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm', 'active');
+      this.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+    });
+  });
+
+  // Dynamic Priority Pricing Calculation
+  const priorityRadios = document.querySelectorAll('input[name="priority_tier"]');
+  const quotePriorityElem = document.getElementById('quote-priority');
+  const quoteTotalElem = document.getElementById('quote-total');
+  const summarySlaElem = document.getElementById('summary-sla');
+
+  const baseAndOther = 4500 + 1200 + 800; // Base + Weight + Insurance
+
+  priorityRadios.forEach(radio => {
+    radio.addEventListener('change', function() {
+      let priorityCost = 2000;
+      let slaText = 'Same-Day Express (2-4h)';
+
+      if (this.value === 'nextday') {
+        priorityCost = 800;
+        slaText = 'Next-Day Hub (By 12:00 PM)';
+      } else if (this.value === 'economy') {
+        priorityCost = 0;
+        slaText = 'Economy Freight (48 hrs)';
+      }
+
+      quotePriorityElem.textContent = '₦' + priorityCost.toLocaleString();
+      const total = baseAndOther + priorityCost;
+      quoteTotalElem.textContent = '₦' + total.toLocaleString();
+      summarySlaElem.textContent = slaText;
+    });
+  });
+
+  // Weight input sync
+  const weightInput = document.getElementById('input-weight');
+  const summaryWeightElem = document.getElementById('summary-weight');
+  if (weightInput && summaryWeightElem) {
+    weightInput.addEventListener('input', function() {
+      const val = parseFloat(this.value) || 0;
+      summaryWeightElem.textContent = val.toFixed(2) + ' kg';
+    });
+  }
+
+  // Confirm Dispatch Feedback
+  const btnDispatch = document.getElementById('btn-dispatch');
+  if (btnDispatch) {
+    btnDispatch.addEventListener('click', function() {
+      const originalText = this.innerHTML;
+      this.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">autorenew</span><span>Booking Generated...</span>';
+      this.classList.add('opacity-80', 'pointer-events-none');
+      setTimeout(() => {
+        this.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Dispatched #DMS-2025-NG-8891</span>';
+        this.classList.remove('opacity-80');
+      }, 1200);
+    });
+  }
+</script></div><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(20,43,69,0.04)] py-space-lg mt-space-xl"><div class="w-full px-margin-desktop flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-on-surface-variant"><span>© 2025 DMS Enterprise Logistics Suite. Secure Customer Portal.</span><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" href="#">Service Level Agreements</a><a class="hover:text-on-surface transition-colors" href="#">Compliance &amp; Security</a><a class="hover:text-on-surface transition-colors" href="#">Dispatch Desk</a></div></div></footer></main></body></html>

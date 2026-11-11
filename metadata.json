@@ -1,0 +1,6 @@
+{
+  "name": "DMS Enterprise - Logistics Operations Suite",
+  "description": "Multi-screen enterprise logistics platform featuring real-time dispatch operations, telemetry radar, live courier tracking, customer booking portal, and driver mobile stack.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
